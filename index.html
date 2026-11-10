@@ -12,7 +12,7 @@
 <style>.receipt-image{object-fit:contain!important;background:#171915}.read-photo{display:block;width:100%;border:1px solid #d8c27d30;background:#e3ce8a0c;color:#e4cf8c;padding:13px 10px;border-radius:16px;font-size:11px;margin-top:14px}.import-shade{z-index:35}.receipt-sheet{padding-bottom:max(28px,env(safe-area-inset-bottom))}.receipt-preview{display:flex;gap:16px;padding:14px;background:#ffffff04;border:1px solid #ffffff0a;border-radius:18px;align-items:center}.receipt-preview>img{width:84px;height:110px;object-fit:contain;border-radius:9px;background:#171915;flex-shrink:0}.receipt-preview>div>svg{color:#d4bd79;margin-bottom:10px}.receipt-preview strong{font-size:13px;font-weight:500;display:block}.receipt-preview p,.receipt-reminder{font-size:11px;line-height:1.8;color:#acb19d;margin-top:9px}.receipt-reminder{margin-top:20px}.ocr-progress{text-align:center;padding:35px 8px 12px;display:flex;align-items:center;flex-direction:column;gap:14px}.ocr-progress>svg{color:#e4cf8c}.ocr-progress p{font-size:13px;line-height:1.8}.ocr-progress small{font-size:10px;color:#9fa58b}.receipt-warning{padding:10px 13px;margin:9px 0 0;background:#e0bb5a09;border-left:2px solid #b89c58;border-radius:0 9px 9px 0;color:#d8c99c;font-size:11px;line-height:1.7}.amount-candidates{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.amount-candidates button{border:1px solid #ffffff18;border-radius:24px;padding:8px 12px;font-size:11px;color:#bfc5ac}.amount-candidates button.selected{color:#e8d18f;border-color:#c7ad5a;background:#ceaf5c10}.ocr-raw{margin-top:24px;font-size:11px;color:#b4ba9f}.ocr-raw summary{cursor:pointer}.ocr-raw pre{white-space:pre-wrap;word-break:break-word;line-height:1.8;font-size:11px;padding:12px;background:#11150f;border-radius:12px;max-height:230px;overflow:auto}.receipt-sheet input[type=date],.receipt-sheet input[type=time]{min-width:0;width:100%}
 </style><style>/* Stable bottom dock, including the iPhone home-indicator safe area. */
 .shell{padding-bottom:calc(92px + env(safe-area-inset-bottom))}.shell.camera-mode{padding-bottom:calc(224px + env(safe-area-inset-bottom))}.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(480px,100%);height:calc(64px + env(safe-area-inset-bottom));margin:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:#171915f5;backdrop-filter:blur(20px);z-index:6;border-top:1px solid #ffffff0b;gap:22px}.camera-controls,.controls{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom));height:100px;width:min(480px,100%);padding:14px 32px 6px;margin:0;z-index:6;background:linear-gradient(#171915ed,#171915);backdrop-filter:blur(20px);border-radius:26px 26px 0 0}.under-shutter,.under{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(64px + env(safe-area-inset-bottom));width:min(480px,100%);height:26px;padding:4px 12px 8px;margin:0;z-index:6;background:#171915;font-size:9px;text-align:center}.bottom-nav button{white-space:nowrap}.camera-controls .side-control small,.controls .side small{white-space:nowrap}@media(max-width:350px){.bottom-nav{gap:13px;padding-left:12px;padding-right:12px}.camera-controls,.controls{padding-left:18px;padding-right:18px}}
-</style><style>.delete-popup{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:24px;background:#080a07b8;backdrop-filter:blur(9px)}.delete-popup-card{width:100%;max-width:340px;background:#272923;border:1px solid #ffffff16;border-radius:28px;padding:26px 24px 20px;text-align:center;box-shadow:0 20px 90px #0008}.delete-popup-icon{width:46px;height:46px;margin:0 auto 17px;border-radius:50%;background:#be78611c;color:#e9ac99;font-size:30px;display:grid;place-items:center}.delete-popup-card h2{font-size:21px;font-weight:550;letter-spacing:-.4px}.delete-popup-card>p{font-size:13px;color:#b7bda7;line-height:1.8;margin-top:12px}.delete-popup-card .form-error{color:#ffb4a4}.delete-popup-actions{display:flex;gap:10px;margin-top:23px}.delete-popup-actions button{flex:1;padding:14px 10px;border-radius:13px;background:#ffffff0a;font-size:13px;font-weight:550}.delete-popup-actions .delete-button{background:#b46250;color:#fff5eb}</style></head>
+</style><style>.delete-popup{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:24px;background:#080a07b8;backdrop-filter:blur(9px)}.delete-popup-card{width:100%;max-width:340px;background:#272923;border:1px solid #ffffff16;border-radius:28px;padding:26px 24px 20px;text-align:center;box-shadow:0 20px 90px #0008}.delete-popup-icon{width:46px;height:46px;margin:0 auto 17px;border-radius:50%;background:#be78611c;color:#e9ac99;font-size:30px;display:grid;place-items:center}.delete-popup-card h2{font-size:21px;font-weight:550;letter-spacing:-.4px}.delete-popup-card>p{font-size:13px;color:#b7bda7;line-height:1.8;margin-top:12px}.delete-popup-card .form-error{color:#ffb4a4}.delete-popup-actions{display:flex;gap:10px;margin-top:23px}.delete-popup-actions button{flex:1;padding:14px 10px;border-radius:13px;background:#ffffff0a;font-size:13px;font-weight:550}.delete-popup-actions .delete-button{background:#b46250;color:#fff5eb}</style><meta name="nm-version" content="firebase-spark-2.0"><style>.fb-login-shade{z-index:80;background:#101112f5;align-items:center}.fb-login{border-radius:28px;max-width:440px;margin:20px}.fb-login h2{font-size:28px;margin:12px 0 15px}.fb-eyebrow{font-size:9px;letter-spacing:1.6px;color:#c8b67e}.fb-status{font-size:10px;color:#b6c5a0;margin:-4px 4px 14px;line-height:1.7}.fb-account{padding:15px;background:#ffffff06;border-radius:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px;font-size:11px;overflow-wrap:anywhere}.fb-account button{color:#e2ba9a;flex-shrink:0}.fb-login input{min-height:46px}</style></head>
 <body>
 <main class="shell">
  <header class="topbar"><button id="avatar" class="avatar" aria-label="Chọn người">H</button><div class="person"><span>Đang ghi cho</span><select id="person" aria-label="Người đang nhập"><option>Hari</option><option>Vợ</option></select></div><button id="settings" class="icon" aria-label="Kết nối và cài đặt">⚙</button></header>
@@ -251,6 +251,112 @@ save=async function(){
  await originalSaveReceipt();if(!state.photo){state.imported=false;sync()}
 };
 sync();
+
+</script>
+<script type="module">
+/* Firebase Spark: transactions directly; private photos remain in Drive. */
+const NM_FIREBASE_CONFIG={apiKey:'AIzaSyDnMNQ5S6memCgESVpTyy9k1wdn4HSeKZs',authDomain:'so-nha-minh-fa37c.firebaseapp.com',projectId:'so-nha-minh-fa37c',storageBucket:'so-nha-minh-fa37c.firebasestorage.app',messagingSenderId:'179565775512',appId:'1:179565775512:web:034c93c3add0778a305eed'};
+const NM_PEOPLE={'lA934danjkXZKw3rotgFvWySId23':'Hari','IWWYVadZx3SQrfMOprKs7cjD1ZE3':'Vợ'};
+const driveCall=call;
+let fbSdk=null,fbDb=null,fbAuth=null,fbUser=null,fbLogging=false;
+const fbMonths=new Map(),fbUploads=new Map();
+const fbShade=el('div','shade fb-login-shade');
+fbShade.innerHTML='<section class="sheet fb-login" role="dialog" aria-modal="true" aria-labelledby="fbTitle"><div class="handle"></div><p class="fb-eyebrow">SỔ NHÀ MÌNH · FIREBASE</p><h2 id="fbTitle">Nhà mình, cùng ghi.</h2><p class="intro">Đăng nhập bằng tài khoản đã tạo trong Firebase. Giao dịch đồng bộ trực tiếp, ảnh vẫn ở Drive.</p><form id="fbLoginForm"><label for="fbEmail">Email</label><input id="fbEmail" type="email" autocomplete="username" required><label for="fbPassword">Mật khẩu</label><input id="fbPassword" type="password" autocomplete="current-password" required minlength="6"><label class="checkbox"><input id="fbRemember" type="checkbox">Ghi nhớ đăng nhập và dữ liệu trên máy riêng</label><p id="fbLoginError" class="form-error" role="alert"></p><button id="fbLoginButton" class="yellow wide" disabled>Đang tải Firebase…</button></form><p class="hint">Chỉ hai tài khoản của Hari và Vợ được vào sổ. Dữ liệu Google Sheet cũ được giữ nguyên.</p></section>';
+document.body.append(fbShade);document.body.style.overflow='hidden';
+const fbStatus=el('p','fb-status','Đang khởi động Firebase…');fbStatus.setAttribute('role','status');document.querySelector('.brandline').after(fbStatus);
+const fbAccount=el('div','fb-account');fbAccount.innerHTML='<span id="fbAccountName">Chưa đăng nhập</span><button type="button" id="fbLogout">Đăng xuất</button>';$('settingsSheet').querySelector('.intro').before(fbAccount);
+$('settingsTitle').textContent='Tài khoản và ảnh Drive';$('settingsSheet').querySelector('.intro').textContent='Giao dịch và thống kê dùng Firebase. URL /exec và WEB_KEY bên dưới chỉ dùng để lưu và xem ảnh trên Drive.';
+$('connect').textContent='Kiểm tra kết nối Drive';$('remember').closest('label').lastChild.textContent='Ghi nhớ kết nối Drive trên máy riêng';
+$('fbRemember').checked=store('local','nm-fb-remember')==='1';
+function fbMessage(e){const c=e&&e.code||'';if(/invalid-credential|wrong-password|user-not-found|invalid-login-credentials/.test(c))return 'Email hoặc mật khẩu chưa đúng.';if(c.includes('permission-denied'))return 'Chưa có quyền đọc sổ. Kiểm tra Rules Firestore và hai UID.';if(c.includes('too-many-requests'))return 'Đăng nhập quá nhiều lần. Hãy chờ rồi thử lại.';if(c.includes('network')||c.includes('unavailable'))return 'Mạng chưa sẵn sàng. Kiểm tra kết nối rồi thử lại.';return e&&e.message||'Chưa kết nối được Firebase.';}
+function fbMonthRange(month){if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(month))throw new Error('Chọn tháng hợp lệ.');const [y,m]=month.split('-').map(Number);return [month+'-01T00:00',String(m===12?y+1:y)+'-'+String(m===12?1:m+1).padStart(2,'0')+'-01T00:00'];}
+function fbRows(snap){return snap.docs.map(d=>({...d.data(),id:d.id})).filter(r=>!r.deleted).sort((a,b)=>String(b.at).localeCompare(String(a.at)));}
+function fbRefreshViews(month,rows){if(!fbUser)return;if(state.tab==='journal'&&$('month').value===month){state.rows=rows;renderJournal();}if(state.tab==='stats'&&$('statsMonth')?.value===month)$('statsView').click();}
+function fbWatch(month){
+ if(!fbUser)throw new Error('Đăng nhập Firebase trước.');
+ if(fbMonths.has(month)){const c=fbMonths.get(month);if(c.error)throw c.error;return c.ready;}
+ const [start,end]=fbMonthRange(month),S=fbSdk;
+ const c={rows:[],error:null,stop:null,ready:null};let resolve,reject,first=true;
+ c.ready=new Promise((a,b)=>{resolve=a;reject=b});fbMonths.set(month,c);
+ const q=S.query(S.collection(fbDb,'households','nhaminh','transactions'),S.where('at','>=',start),S.where('at','<',end),S.orderBy('at','desc'));
+ c.stop=S.onSnapshot(q,{includeMetadataChanges:true},snap=>{
+  c.rows=fbRows(snap);c.error=null;
+  fbStatus.textContent=snap.metadata.hasPendingWrites?'Có khoản đang chờ đồng bộ':snap.metadata.fromCache?'Đang hiện dữ liệu trên máy · chờ cập nhật từ mạng':'Đã đồng bộ với sổ chung';
+  if(first){first=false;resolve(c.rows)}else fbRefreshViews(month,c.rows);
+ },e=>{c.error=e;fbStatus.textContent=fbMessage(e);if(first){first=false;reject(e)};fbMonths.delete(month);toast(fbMessage(e))});
+ return c.ready;
+}
+function fbItem(v,old){
+ const n=Number(v.amount);if(!Number.isSafeInteger(n)||n<=0||n>100000000000)throw new Error('Số tiền không hợp lệ.');
+ if(!['Hari','Vợ'].includes(v.person)||!['expense','income','transfer'].includes(v.type)||!categories.includes(v.category)||!['Tiền mặt','Chuyển khoản','Thông báo'].includes(v.source))throw new Error('Kiểm tra người, loại, danh mục và thanh toán.');
+ if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?$/.test(v.at)||!Number.isFinite(Date.parse(v.at+'+07:00')))throw new Error('Ngày giờ giao dịch không hợp lệ.');
+ return {...old,person:v.person,type:v.type,amount:n,at:v.at,category:v.category,source:old?.raw?old.source:v.source,note:String(v.note||'').slice(0,1000),rev:uuid(),deleted:false,updatedBy:fbUser.uid};
+}
+async function fbSave(q){
+ const S=fbSdk,v=q.item||{},id=v.id||'m_'+q.requestId;
+ if(!/^[A-Za-z0-9_-]{1,110}$/.test(id)||(!v.id&&!/^[A-Za-z0-9-]{16,100}$/.test(q.requestId||'')))throw new Error('Thiếu mã bản nháp.');
+ const ref=S.doc(fbDb,'households','nhaminh','transactions',id);
+ // Validate before sending any photo.
+ fbItem(v,{});
+ let photo=v.photo||'';
+ if(q.photo){
+  const cached=fbUploads.get(q.requestId)||store('session','nm-fb-photo-'+q.requestId);
+  if(cached)photo=cached;
+  else {const r=await driveCall('uploadPhoto',{requestId:q.requestId,photo:q.photo});photo=r.id;fbUploads.set(q.requestId,photo);store('session','nm-fb-photo-'+q.requestId,photo);}
+ }
+ return S.runTransaction(fbDb,async tx=>{
+  const snap=await tx.get(ref),old=snap.exists()?snap.data():null;
+  if(v.id){if(!old||old.deleted)throw new Error('Khoản không còn tồn tại.');if(old.rev!==v.rev)throw new Error('Khoản đã được sửa trên máy khác. Tải lại Nhật ký.');}
+  else if(old)return {ok:true,id,duplicate:true};
+  const item=fbItem(v,old||{id,created:clock(),bank:'',raw:'',photo:'',dedupe:'manual:'+q.requestId,enteredBy:fbUser.uid});
+  item.id=id;if(q.photo)item.photo=photo;item.updatedAt=S.serverTimestamp();tx.set(ref,item);return {ok:true,id};
+ });
+}
+call=async function(action,data={}){
+ if(!fbUser||!fbSdk)throw new Error('Đăng nhập Firebase trước.');
+ try{
+  if(action==='list'){await fbWatch(data.month);const c=fbMonths.get(data.month);return {ok:true,rows:c.rows,categories};}
+  if(action==='photo')return driveCall(action,data);
+  if(action==='save')return await fbSave(data);
+  if(action==='delete'){
+   const S=fbSdk,ref=S.doc(fbDb,'households','nhaminh','transactions',data.id);
+   return await S.runTransaction(fbDb,async tx=>{const snap=await tx.get(ref);if(!snap.exists()||snap.data().deleted)throw new Error('Khoản này không còn tồn tại.');if(snap.data().rev!==data.rev)throw new Error('Khoản đã được sửa trên máy khác. Hãy tải lại.');tx.update(ref,{deleted:true,rev:uuid(),updatedBy:fbUser.uid,updatedAt:S.serverTimestamp()});return {ok:true};});
+  }
+  throw new Error('Thao tác chưa được hỗ trợ.');
+ }catch(e){throw new Error(fbMessage(e));}
+};
+function fbClearViews(){for(const c of fbMonths.values())c.stop?.();fbMonths.clear();fbUploads.clear();state.rows=[];images.clear();$('grid').replaceChildren();$('total').textContent='—';$('statsContent')?.replaceChildren();}
+$('fbLoginForm').onsubmit=async e=>{
+ e.preventDefault();if(fbLogging||!fbSdk)return;fbLogging=true;$('fbLoginButton').disabled=true;$('fbLoginError').textContent='';
+ try{
+  const remember=$('fbRemember').checked;store('local','nm-fb-remember',remember?'1':'');
+  await fbSdk.setPersistence(fbAuth,remember?fbSdk.browserLocalPersistence:fbSdk.browserSessionPersistence);
+  const result=await fbSdk.signInWithEmailAndPassword(fbAuth,$('fbEmail').value.trim(),$('fbPassword').value);
+  $('fbPassword').value='';if(!NM_PEOPLE[result.user.uid]){await fbSdk.signOut(fbAuth);throw new Error('Tài khoản này chưa được cấp quyền vào sổ.');}
+  if(remember&&!fbPersistent)location.reload();
+ }catch(e){$('fbLoginError').textContent=fbMessage(e)}finally{fbLogging=false;$('fbLoginButton').disabled=false;}
+};
+$('fbLogout').onclick=async()=>{
+ if(state.busy)return;state.busy=true;sync();
+ try{fbClearViews();await fbSdk.signOut(fbAuth);await fbSdk.terminate(fbDb);await fbSdk.clearIndexedDbPersistence(fbDb);}catch(e){toast(fbMessage(e))}finally{store('local','nm-fb-remember','');store('session','nm-draft','');store('session','nm-config','');store('local','nm-config','');location.reload();}
+};
+let fbPersistent=store('local','nm-fb-remember')==='1';
+try{
+ const base='https://www.gstatic.com/firebasejs/12.19.0/';
+ const [A,U,D]=await Promise.all([import(base+'firebase-app.js'),import(base+'firebase-auth.js'),import(base+'firebase-firestore.js')]);
+ fbSdk={...A,...U,...D};const app=A.initializeApp(NM_FIREBASE_CONFIG);fbAuth=U.getAuth(app);
+ fbDb=D.initializeFirestore(app,fbPersistent?{localCache:D.persistentLocalCache({tabManager:D.persistentMultipleTabManager()})}:{localCache:D.memoryLocalCache()});
+ $('fbLoginButton').textContent='Đăng nhập sổ chung';$('fbLoginButton').disabled=false;
+ U.onAuthStateChanged(fbAuth,async user=>{
+  fbClearViews();fbUser=null;
+  if(user&&!NM_PEOPLE[user.uid]){await U.signOut(fbAuth);$('fbLoginError').textContent='Tài khoản chưa được cấp quyền.';return;}
+  if(!user){fbShade.classList.remove('hidden');document.body.style.overflow='hidden';fbStatus.textContent='Đăng nhập để xem sổ';$('fbAccountName').textContent='Chưa đăng nhập';return;}
+  fbUser=user;$('person').value=NM_PEOPLE[user.uid];store('local','nm-person',$('person').value);sync();
+  $('fbAccountName').textContent=NM_PEOPLE[user.uid]+' · '+(user.email||'');fbShade.classList.add('hidden');document.body.style.overflow='';
+  fbStatus.textContent='Đang đồng bộ giao dịch…';fbWatch(clock().slice(0,7)).catch(e=>toast(fbMessage(e)));
+  if(state.tab==='journal')loadJournal();if(state.tab==='stats')$('statsView').click();
+ });
+}catch(e){$('fbLoginError').textContent='Không tải được Firebase: '+fbMessage(e);$('fbLoginButton').textContent='Tải lại trang để thử lại';fbStatus.textContent='Chưa kết nối Firebase';}
 
 </script>
 </body>
